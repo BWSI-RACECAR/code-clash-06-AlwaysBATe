@@ -46,6 +46,8 @@ class Solution:
     def findMissingNumbers(self, numbers):
             #type numbers: list of float
             #return type: list of int
+            if len(numbers) == 0:
+                return "invalid input"
             ans = [] # we have to remember missing number
 
             numbers.sort()
@@ -60,7 +62,7 @@ class Solution:
                     ans[i] += 1
                 ans[i] = int(ans[i])
             if len(ans) == 0:
-                ans.append(0)
+                return "non missing"
             return ans 
             #TODO: Write code below to return an int list with the solution to the prompt.
 
