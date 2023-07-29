@@ -46,14 +46,17 @@ class Solution:
     def findMissingNumbers(self, numbers):
             #type numbers: list of float
             #return type: list of int
+            ans = [] # we have to remember missing number
+
             numbers.sort()
-            max = numbers[len(numbers)-1]
-            min = numbers[0]
-            for i in range (len(numbers), 0):
+
+            for i in range (0, len(numbers) - 1): 
                 if numbers[i+1] - numbers[i] > 1:
-                    cnt = int(numbers[i+1]) - int(numbers[i])
-                    for cnt in range (0, cnt+1):
-                        print(cnt+numbers[i+1])
+                    cnt = int(numbers[i+1] - numbers[i])
+                    for cnt in range (1, cnt): 
+                        ans.append(cnt+numbers[i])
+
+            return ans 
             #TODO: Write code below to return an int list with the solution to the prompt.
 
 def main():
