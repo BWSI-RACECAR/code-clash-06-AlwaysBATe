@@ -60,7 +60,7 @@ class Solution:
                     ans[i] += 1
                 ans[i] = int(ans[i])
             if len(ans) == 0:
-                return [0]
+                ans.append(0)
             return ans 
             #TODO: Write code below to return an int list with the solution to the prompt.
 
