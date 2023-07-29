@@ -54,7 +54,13 @@ class Solution:
                 if numbers[i+1] - numbers[i] > 1:
                     cnt = int(numbers[i+1] - numbers[i])
                     for cnt in range (1, cnt): 
-                        ans.append(int(cnt+numbers[i]))
+                        ans.append(cnt+numbers[i])
+            for i in range (0,len(ans)):
+                if int(ans[i])< ans[i]:
+                    ans[i] += 1
+                ans[i] = int(ans[i])
+            if len(ans) == 0:
+                return 0
             return ans 
             #TODO: Write code below to return an int list with the solution to the prompt.
 
