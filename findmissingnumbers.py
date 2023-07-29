@@ -55,14 +55,13 @@ class Solution:
                     cnt = int(numbers[i+1] - numbers[i])
                     for cnt in range (1, cnt): 
                         ans.append(cnt+numbers[i])
-
             return ans 
             #TODO: Write code below to return an int list with the solution to the prompt.
 
 def main():
     array = input().split(" ")
     for x in range (0, len(array)):
-        array[x] = float(array[x])
+        array[x] = int(array[x])
 
     tc1 = Solution()
     ans = tc1.findMissingNumbers(array)
